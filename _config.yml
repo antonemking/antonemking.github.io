@@ -1,0 +1,21 @@
+title: Antone King
+description: AI architect. Farmer. Father. Writing about building intelligent systems and living with purpose.
+baseurl: ""
+url: "https://antonemking.github.io"
+author: Antone King
+email: toneking972@gmail.com
+twitter_username: antoneking
+github_username: antonemking
+
+theme: minima
+minima:
+  skin: classic
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+permalink: /:year/:month/:day/:title/
+
+show_excerpts: true

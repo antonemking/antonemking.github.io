@@ -1,0 +1,75 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Typography
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #222;
+}
+
+// Clean header
+.site-header {
+  border-top: none;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.3px;
+  color: #111 !important;
+  &:hover { text-decoration: none; color: #555 !important; }
+}
+
+// Nav links
+.site-nav .page-link {
+  color: #555;
+  font-size: 0.95rem;
+  &:hover { color: #111; }
+}
+
+// Post list on home page
+.post-list {
+  li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+  .post-meta { font-size: 0.85rem; color: #888; }
+  a { color: #111; font-weight: 600; &:hover { color: #444; } }
+}
+
+// Post content
+.post-header .post-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.post-content {
+  h2 { font-size: 1.3rem; margin-top: 2rem; font-weight: 700; }
+  h3 { font-size: 1.1rem; font-weight: 600; }
+  a { color: #1a73e8; text-decoration: none; border-bottom: 1px solid #cce0ff; &:hover { border-color: #1a73e8; } }
+  blockquote {
+    border-left: 3px solid #ddd;
+    padding-left: 1rem;
+    color: #555;
+    font-style: italic;
+  }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre code { background: none; padding: 0; }
+}
+
+// Constrain content width for readability (Chip Huyen style)
+.wrapper {
+  max-width: 700px;
+}
+
+// Footer
+.site-footer {
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+  color: #aaa;
+}
