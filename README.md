@@ -25,7 +25,8 @@ The workflow deploys pushes to `main`. A local branch/build does not publish any
 - `_posts/`: dated Markdown posts. Preserve existing dates/permalinks when editing published writing.
 - `blog.md`: Writing archive, retaining its original `/blog/` URL.
 - `projects.md`, `projects/`: overview and individual project notes.
-- `_includes/project-list.html`: shared project summaries on Home and Projects.
+- `_data/projects.yml`: shared project titles, summaries, and status on Home and Projects.
+- `library.html`, `_data/books.yml`: reading list, grouped by reading status; only confirmed books are listed.
 - `about.md`: biography and contact.
 - `_layouts/`, `assets/css/style.scss`: accessible layouts and responsive styling.
 
@@ -44,3 +45,16 @@ Before adding a public Pixel Lab demo:
 5. Check keyboard interaction, small-screen layout, first-load time, and every lesson in a clean browser. Link the demo only after those checks pass.
 
 The current site deliberately contains no dead demo buttons or localhost links. Contact uses the email and social accounts already present in `_config.yml`.
+
+## Updating the Library
+
+Replace the empty list in `_data/books.yml` with confirmed entries:
+
+```yaml
+- title: "Book title"
+  author: "Author name"
+  status: reading # reading, finished, or to-read
+  note: "Optional personal note."
+```
+
+Currently reading books appear on the homepage. Empty Read and Up next sections are hidden.

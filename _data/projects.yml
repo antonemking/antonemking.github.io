@@ -1,0 +1,10 @@
+- title: Pixel Lab
+  url: /projects/pixel-lab/
+  status: Local prototype
+  category: Computer vision
+  summary: Inspect an image, edit Python, and watch a loop walk across its pixels.
+- title: Farm survey rover
+  url: /projects/farm-rover/
+  status: Early exploration
+  category: Farm robotics
+  summary: Learning about cameras, field data collection, and robot perception on a small farm.

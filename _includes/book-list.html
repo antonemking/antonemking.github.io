@@ -1,0 +1,9 @@
+<ul class="book-list">
+  {% for book in include.books %}
+  <li id="{{ book.title | slugify }}">
+    <h3>{{ book.title | escape }}</h3>
+    {% if book.author %}<p class="book-author">{{ book.author | escape }}</p>{% endif %}
+    {% if book.note %}<p class="book-note">{{ book.note | escape }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

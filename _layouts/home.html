@@ -1,23 +1,54 @@
 ---
 layout: default
 ---
+<h1 class="sr-only">{{ site.title }}</h1>
 <div class="home-intro prose">{{ content }}</div>
-<section class="home-section" aria-labelledby="writing-heading">
+<section class="home-section" aria-labelledby="latest-heading">
   <div class="section-heading">
-    <h2 id="writing-heading">Writing</h2>
-    <a class="quiet-link" href="{{ '/blog/' | relative_url }}">All writing <span aria-hidden="true">→</span></a>
+    <h2 id="latest-heading">Latest</h2>
+    <p>Projects &amp; writing</p>
   </div>
-  {% include post-list.html limit=3 %}
+  <ul class="timeline">
+    {% for project in site.data.projects %}
+    <li>
+      <div class="entry-heading">
+        <h3><a href="{{ project.url | relative_url }}">{{ project.title }} <span aria-hidden="true">↗</span></a></h3>
+        <span class="entry-date">{{ project.status }}</span>
+      </div>
+      <p class="entry-type">Project</p>
+      <p class="entry-summary">{{ project.summary }}</p>
+    </li>
+    {% endfor %}
+    {% for post in site.posts limit:3 %}
+    <li>
+      <div class="entry-heading">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }} <span aria-hidden="true">↗</span></a></h3>
+        <time class="entry-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time>
+      </div>
+      <p class="entry-type">Writing</p>
+      <p class="entry-summary">{{ post.excerpt | strip_html | strip | truncatewords: 22 }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="archive-links">
+    <a href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">→</span></a>
+    <a href="{{ '/blog/' | relative_url }}">All writing <span aria-hidden="true">→</span></a>
+  </div>
 </section>
-<section class="home-section" aria-labelledby="projects-heading">
+<section class="library-preview" aria-labelledby="library-heading">
   <div class="section-heading">
-    <h2 id="projects-heading">At the workbench</h2>
-    <a class="quiet-link" href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">→</span></a>
+    <h2 id="library-heading"><a href="{{ '/library/' | relative_url }}">Library <span aria-hidden="true">↗</span></a></h2>
+    <p>Books &amp; notes</p>
   </div>
-  {% include project-list.html %}
+  <p>What I’m reading and thinking about.</p>
+  {% assign reading = site.data.books | where: 'status', 'reading' %}
+  {% if reading.size > 0 %}
+  <ul class="reading-preview">
+    {% for book in reading limit:3 %}
+    <li><a href="{{ '/library/' | relative_url }}#{{ book.title | slugify }}">{{ book.title | escape }}</a>{% if book.author %}<span> · {{ book.author | escape }}</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <a class="quiet-link" href="{{ '/library/' | relative_url }}">Visit the library <span aria-hidden="true">→</span></a>
+  {% endif %}
 </section>
-<aside class="personal-note">
-  <span class="eyebrow">Beyond the screen</span>
-  <p>Sheep, goats, three kids, and a small farm in Delaware. A different kind of systems thinking.</p>
-  <a class="quiet-link" href="{{ '/about/' | relative_url }}">A little more about me <span aria-hidden="true">→</span></a>
-</aside>

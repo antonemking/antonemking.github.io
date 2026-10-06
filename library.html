@@ -1,0 +1,30 @@
+---
+layout: page
+title: Library
+section: library
+permalink: /library/
+intro: Books I’m reading, and notes along the way.
+---
+{% assign reading = site.data.books | where: 'status', 'reading' %}
+{% assign finished = site.data.books | where: 'status', 'finished' %}
+{% assign to_read = site.data.books | where: 'status', 'to-read' %}
+<section class="bookshelf" aria-labelledby="reading-heading">
+  <h2 id="reading-heading">Currently reading</h2>
+  {% if reading.size > 0 %}
+    {% include book-list.html books=reading %}
+  {% else %}
+    <p class="empty-library">No books listed yet.</p>
+  {% endif %}
+</section>
+{% if finished.size > 0 %}
+<section class="bookshelf" aria-labelledby="finished-heading">
+  <h2 id="finished-heading">Read</h2>
+  {% include book-list.html books=finished %}
+</section>
+{% endif %}
+{% if to_read.size > 0 %}
+<section class="bookshelf" aria-labelledby="next-heading">
+  <h2 id="next-heading">Up next</h2>
+  {% include book-list.html books=to_read %}
+</section>
+{% endif %}
