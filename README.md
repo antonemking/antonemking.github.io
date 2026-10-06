@@ -27,7 +27,6 @@ The workflow deploys pushes to `main`. A local branch/build does not publish any
 - `projects.md`, `projects/`: overview and individual project notes.
 - `_data/projects.yml`: shared project titles, summaries, and status on Home and Projects.
 - `library.html`, `_data/books.yml`: reading list, grouped by reading status; only confirmed books are listed.
-- `about.md`: biography and contact.
 - `_layouts/`, `assets/css/style.scss`: accessible layouts and responsive styling.
 
 Add posts using `YYYY-MM-DD-title.md`, with `layout: post`, a title, and a date in front matter. The archive and RSS feed update automatically. Existing post content is preserved in this iteration.
