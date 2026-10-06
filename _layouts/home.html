@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="home-intro prose">{{ content }}</div>
+<section class="home-section" aria-labelledby="writing-heading">
+  <div class="section-heading">
+    <h2 id="writing-heading">Writing</h2>
+    <a class="quiet-link" href="{{ '/blog/' | relative_url }}">All writing <span aria-hidden="true">→</span></a>
+  </div>
+  {% include post-list.html limit=3 %}
+</section>
+<section class="home-section" aria-labelledby="projects-heading">
+  <div class="section-heading">
+    <h2 id="projects-heading">At the workbench</h2>
+    <a class="quiet-link" href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">→</span></a>
+  </div>
+  {% include project-list.html %}
+</section>
+<aside class="personal-note">
+  <span class="eyebrow">Beyond the screen</span>
+  <p>Sheep, goats, three kids, and a small farm in Delaware. A different kind of systems thinking.</p>
+  <a class="quiet-link" href="{{ '/about/' | relative_url }}">A little more about me <span aria-hidden="true">→</span></a>
+</aside>

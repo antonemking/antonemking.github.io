@@ -1,5 +1,5 @@
 title: Antone King
-description: AI architect. Farmer. Father. Writing about building intelligent systems and living with purpose.
+description: Enterprise AI, computer vision, and experiments on a small farm. Notes and projects by Antone King.
 baseurl: ""
 url: "https://antonemking.github.io"
 author: Antone King
@@ -19,3 +19,10 @@ plugins:
 permalink: /:year/:month/:day/:title/
 
 show_excerpts: true
+
+lang: en
+exclude:
+  - README.md
+  - vendor
+  - Gemfile
+  - Gemfile.lock

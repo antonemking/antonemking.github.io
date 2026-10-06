@@ -1,15 +1,18 @@
 ---
 layout: home
+title: Home
+description: Antone King writes about enterprise AI and explores computer vision and robotics on a small farm in Delaware.
 ---
 
-I'm Antone King — a Generative AI Solution Architect, farmer, husband, and father of three based in Middletown, Delaware.
+<p class="eyebrow">AI architect · Farmer · Father</p>
 
-My focus is on building intelligent systems at enterprise scale, raising animals, and raising kids. I write about AI architecture, mental models, faith, and occasionally the smell of a good brisket smoke.
+# Hi, I’m Antone King.
 
-Currently working at **ServiceNow** on AI-powered automation and agentic workflows.
+I build AI systems and learn by getting my hands dirty.
+{: .intro-line }
 
-I aim to post once or twice a month. Topics I write about:
-- AI systems design and architecture
-- Farming and land stewardship
-- Mental models (Jesus, Munger, and others)
-- Fitness and resilience
+I'm a Generative AI Solution Architect at **ServiceNow**, working on enterprise AI, search, and agentic workflows. At home in Middletown, Delaware, I raise animals with my family and explore computer vision and robotics through small, hands-on experiments.
+
+This is my notebook for the work: what I’m building, what I’m learning, and the questions that keep me going.
+
+<div class="intro-links"><a href="{{ '/blog/' | relative_url }}">Read the writing <span aria-hidden="true">→</span></a><a href="{{ '/projects/' | relative_url }}">Explore the projects <span aria-hidden="true">→</span></a></div>

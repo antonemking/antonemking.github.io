@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <meta name="theme-color" content="#faf9f6">
+    {% feed_meta %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="site-name" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Antone King<span class="name-period" aria-hidden="true">.</span></a>
+        <nav aria-label="Main navigation">
+          <a href="{{ '/blog/' | relative_url }}"{% if page.section == 'writing' or page.layout == 'post' %} aria-current="page"{% endif %}>Writing</a>
+          <a href="{{ '/projects/' | relative_url }}"{% if page.section == 'projects' %} aria-current="page"{% endif %}>Projects</a>
+          <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+        </nav>
+      </header>
+      <main id="main" tabindex="-1">{{ content }}</main>
+      <footer class="site-footer" id="contact">
+        <div>
+          <p class="footer-invitation">Good conversations start with a note.</p>
+          <a href="mailto:{{ site.email }}">Email me <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-links" aria-label="Elsewhere">
+          <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+          <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,17 +1,12 @@
 ---
 layout: page
-title: Blog
+title: Writing
+section: writing
+eyebrow: The notebook
 permalink: /blog/
+intro: Notes on building AI systems, learning from experiments, and life on a small farm.
 ---
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <span>{{ post.date | date: "%B %d, %Y" }}</span> &mdash;
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {% if post.excerpt %}
-        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+{% include post-list.html %}
+
+<p class="archive-note">A small beginning. You can follow along with <a href="{{ '/feed.xml' | relative_url }}">RSS</a>.</p>
