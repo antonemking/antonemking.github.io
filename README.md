@@ -43,7 +43,7 @@ Before adding a public Pixel Lab demo:
 4. Verify the pinned Pyodide and CodeMirror CDN resources, record third-party licenses, and test slow-network/error states. The demo needs network access for its runtime unless those dependencies are vendored.
 5. Check keyboard interaction, small-screen layout, first-load time, and every lesson in a clean browser. Link the demo only after those checks pass.
 
-The current site deliberately contains no dead demo buttons or localhost links. Contact uses the email and social accounts already present in `_config.yml`.
+The production site contains no dead demo buttons or localhost links. Contact uses the email and social accounts already present in `_config.yml`.
 
 ## Updating the Library
 
@@ -56,4 +56,14 @@ Replace the empty list in `_data/books.yml` with confirmed entries:
   note: "Optional personal note."
 ```
 
-Currently reading books appear on the homepage. Empty Read and Up next sections are hidden.
+The Library groups books by reading status. Empty Read and Up next sections are hidden.
+
+## Portfolio review (local only)
+
+Build with _config.yml,_config.review.yml to include local-only Pixel Lab and original Mya visualization links. Production builds use _config.yml alone; no localhost demo links are emitted.
+
+- _data/writing.yml lists actual existing research and technical documents; it does not fabricate publications.
+- writing/sam-sees-sheep.md introduces the user's existing AI-assisted research write-up, explicitly not formally published or peer-reviewed.
+- Sam images/PDF are unchanged copies from the public antonemking/SamSeesSheep repository. Source/provenance is recorded in the external review handoff.
+- The Mya trace inspector consumes a controlled actual harness run with a scripted model and one real file-read tool. It does not call a provider or replay tools. Example input and model output are fixtures; timings are not performance evidence.
+- Original Pixel Lab source, datasets, labels, and trained exports stay outside this site. A public demo still needs approved data provenance and self-contained packaging.

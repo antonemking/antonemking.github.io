@@ -125,3 +125,64 @@ h3 { margin: 0 0 7px; font-size: 14px; line-height: 1.5; }
   .site-shell { max-width: none; padding: 0; }
   a { color: black; }
 }
+
+// Portfolio evidence, retaining the compact editorial layout.
+.featured-project { margin-bottom: 44px; }
+.featured-title { font-size: 19px; margin: 16px 0 9px; }
+.featured-title a { text-decoration: none; }
+.featured-title a:hover { text-decoration: underline; }
+.featured-title span { font-size: 12px; color: var(--muted); }
+.featured-summary { font-size: 12px; max-width: 660px; color: var(--muted); margin-bottom: 19px; }
+.featured-figure, .case-figure { margin: 18px 0 20px; }
+.featured-figure img, .case-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+figcaption { margin-top: 8px; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.resource-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 20px 0; font-size: 11px; }
+.resource-links a { text-decoration: underline; }
+.writing-preview { border-top: 1px solid var(--line); padding-top: 25px; }
+.compact-entries { list-style: none; padding: 0; margin: 0; }
+.compact-entries li { padding: 18px 0; }
+.compact-entries li + li { border-top: 1px solid var(--line); }
+.compact-entries h3 { margin: 0 0 7px; }
+.compact-entries h3 a { text-decoration: none; }
+.compact-entries h3 a:hover { text-decoration: underline; }
+.compact-entries p { color: var(--muted); font-size: 12px; margin: 0; }
+.compact-entries .entry-type { font-size: 10px; margin-bottom: 5px; }
+.section-note { color: var(--muted); font-size: 11px; line-height: 1.8; margin: 15px 0 22px; }
+.evidence-note { font-size: 10px; color: var(--muted); margin: 9px 0 0; }
+.project-list .evidence-note { font-size: 10px; margin-top: 9px; }
+.project-thumbnail { display: block; margin-top: 18px; }
+.project-thumbnail img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.writing-index, .case-index { display: flex; flex-wrap: wrap; gap: 10px 22px; padding: 14px 0; margin: 24px 0 32px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 11px; }
+.writing-index a, .case-index a { text-decoration: none; }
+.writing-index a:hover, .case-index a:hover { text-decoration: underline; }
+.prose .compact-entries { padding: 0; margin: 0 0 25px; }
+.prose .compact-entries h3 { margin-top: 0; }
+.prose .compact-entries li + li { margin-top: 0; }
+.review-demo-link { font-size: 12px; }
+.trace-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 16px 0; }
+.trace-controls button { color: var(--ink); background: var(--paper); border: 1px solid var(--line); padding: 8px 14px; font: inherit; font-size: 12px; cursor: pointer; }
+.trace-controls button:focus-visible, input:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.trace-controls button:disabled { opacity: .4; cursor: default; }
+.trace-position { font-size: 11px; color: var(--muted); }
+.trace-range { width: 100%; accent-color: var(--ink); }
+.trace-step-label { color: var(--muted); font-size: 11px; }
+.trace-event { margin: 20px 0; border-left: 2px solid var(--ink); padding-left: 20px; }
+.trace-event h2 { font-size: 15px; margin: 0 0 12px; }
+.trace-payload { max-height: 430px; overflow: auto; font-size: 11px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.prose .trace-list { list-style: none; padding: 0; border-top: 1px solid var(--line); }
+.trace-list li { padding: 7px 0; font-size: 11px; }
+.trace-list li[data-current="true"] { font-weight: 600; }
+@media (max-width: 640px) {
+  .featured-summary { font-size: 12px; }
+  .featured-title { font-size: 17px; }
+  .resource-links { gap: 10px 18px; }
+  .case-index { gap: 10px 18px; }
+  .prose table { font-size: 11px; }
+  .prose th, .prose td { padding: 7px; }
+}
+
+// Plain homepage directory.
+.home-directory { margin-bottom: 34px; }
+.home-directory h2 { margin-bottom: 8px; color: var(--muted); font-size: 12px; }
+.home-directory ul { list-style: none; margin: 0; padding: 0; }
+.home-directory li { padding: 5px 0; }

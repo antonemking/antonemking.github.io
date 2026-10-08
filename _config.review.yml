@@ -1,0 +1,3 @@
+# Local review only. Production uses _config.yml without this overlay.
+review: true
+url: http://127.0.0.1:4011

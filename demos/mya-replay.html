@@ -1,0 +1,29 @@
+---
+layout: page
+title: Inside a Mya run
+section: projects
+eyebrow: Recorded trace · Interactive example
+permalink: /demos/mya-replay/
+intro: Follow the boundary between model context, a tool request, and its result.
+---
+<p>A small run captured from the real Mya agent loop and file-read tool. The model replies come from a scripted test fixture; the input is a file created for this example. This viewer reads the recorded events and makes no model calls or tool executions.</p>
+<div id="trace-viewer" data-trace-url="{{ '/assets/demos/mya-trace.json' | relative_url }}">
+  <div class="trace-controls" aria-label="Replay controls">
+    <button id="trace-back" type="button" disabled>← Previous</button>
+    <button id="trace-play" type="button" disabled>Play</button>
+    <button id="trace-next" type="button" disabled>Next →</button>
+    <span class="trace-position" id="trace-position" role="status">Loading trace…</span>
+    <label class="trace-step-label" for="trace-range">Event position</label>
+    <input id="trace-range" class="trace-range" type="range" min="0" max="0" value="0" disabled>
+  </div>
+  <article class="trace-event">
+    <h2 id="trace-title">Recorded event</h2>
+    <p id="trace-explanation"></p>
+    <details open><summary>Event JSON</summary><pre id="trace-payload" class="trace-payload"></pre></details>
+  </article>
+  <details><summary>All events in this run</summary><ol id="trace-list" class="trace-list"></ol></details>
+</div>
+<noscript><p>JavaScript is needed for stepping through events. <a href="{{ '/assets/demos/mya-trace.json' | relative_url }}">Read the recorded JSON</a>.</p></noscript>
+<p class="section-note">Token counts in this fixture are test values. This example shows how a run is recorded and inspected; it is not a measure of model quality or efficiency.</p>
+<div class="resource-links"><a href="{{ '/assets/demos/mya-trace.json' | relative_url }}">Download the trace JSON</a><a href="{{ '/projects/mya/' | relative_url }}">← Mya case study</a></div>
+<script src="{{ '/assets/js/mya-replay.js' | relative_url }}" defer></script>

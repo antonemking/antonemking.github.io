@@ -2,32 +2,49 @@
 layout: page
 title: Pixel Lab
 section: projects
-eyebrow: Computer vision · Local prototype
+eyebrow: Computer vision · Interactive learning
 permalink: /projects/pixel-lab/
-intro: What does the code actually do to the pixels?
-description: A local learning tool for inspecting image arrays and running editable Python lessons in the browser.
+intro: "The grape analyzer: seeing what the code actually does to an image."
 ---
 
-Pixel Lab is a hands-on learning tool that connects a photograph to the arrays and code underneath it. It grew out of a small experiment with a grape-cluster image and pixel labels.
+## Problem
 
-## From a photo to an array
+A photo, a label mask, and a training matrix are different views of the same pixels. I wanted a way to inspect that connection rather than treating the array operations as a black box.
 
-Select a pixel and inspect its values. Look at a small window of the image as a grid of numbers. Change the Python, run it in the browser, and see the result alongside the photo.
+## Approach
 
-The lesson **“Walk the pixels with loops”** makes the connection especially direct: the loop's steps replay on the image, showing which pixels the code visits and keeps.
+Pixel Lab grew out of a small grape-cluster image experiment. It brings the photo, its arrays, and editable Python into one browser view. Select a pixel, inspect a small array window, change the code, and watch the result alongside the image.
 
-## What’s in the prototype
+The lesson **“Walk the pixels with loops”** connects the code to the data directly: each loop visit replays on the image, showing which pixels are kept as training rows.
 
-- A photo viewer with pixel selection and image overlays.
-- An array inspector for looking closely at the underlying values.
-- Seven editable Python lessons, from image arrays and loops to a simple pixel classifier.
-- Python running in the browser through Pyodide, with visual output beside the code.
+## Evidence
 
-This is an exercise in understanding the mechanics of computer vision. It uses one photo; it does not establish performance on other images or in the field.
+The local prototype has seven editable lessons covering image arrays, labels, loops, vectorization, color-space points, a simple classifier, and training by hand. Python runs in the browser through Pyodide.
 
-<aside class="project-status" aria-label="Project status">
-  <strong>Current status: local prototype</strong>
-  <p>The working demo currently uses local image labels and a model export. A public demo needs a sample image and data cleared for sharing, plus a self-contained set of assets. There is no hosted demo yet.</p>
-</aside>
+The loop in the existing third lesson records each visited pixel and builds its training row from the color array:
+
+~~~python
+for r in range(r0, r0 + 6):
+    for c in range(c0, c0 + 10):
+        labeled = lesion[r, c] or healthy_skin[r, c] or shadow[r, c] or leaf_stem[r, c]
+        visit(r, c, kept=labeled)
+        if labeled:
+            X.append(lab[r, c])
+            y.append(int(lesion[r, c]))
+~~~
+
+{% if site.review %}
+<div class="project-status"><strong>Local interactive demo</strong><p><a href="http://127.0.0.1:8765/tools/pixel-lab/">Open Pixel Lab <span aria-hidden="true">↗</span></a> to inspect the grape photo and run the original lessons. This review link uses the existing local prototype and its local data.</p></div>
+{% else %}
+<div class="project-status"><strong>Current status: local prototype</strong><p>The working demo uses local image labels and a model export. A public version needs an image and data cleared for sharing, then a self-contained set of assets. There is no hosted demo yet.</p></div>
+{% endif %}
+
+## Lessons & limits
+
+Watching a loop keep or skip a pixel makes the relationship between labels, features, and training rows tangible. The lesson is about the mechanics of computer vision. A classifier built around one image does not establish disease-detection performance on other images or in the field.
+
+## Next question
+
+Can the same explanations remain useful when the image, labels, or feature space change?
 
 [← All projects]({{ '/projects/' | relative_url }})

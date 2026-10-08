@@ -1,0 +1,15 @@
+- title: "SamSeesSheep: a measurement pipeline"
+  url: /writing/sam-sees-sheep/
+  kind: research
+  status: Research write-up · not peer-reviewed
+  summary: The existing project paper, its measurement protocol, and the evidence behind the claims.
+- title: Held-out keypoint and ear-angle benchmarks
+  url: https://github.com/antonemking/SamSeesSheep/blob/main/docs/v0.7-benchmark.md
+  kind: notes
+  status: Engineering note · repository document
+  summary: Two held-out clips, the training progression, and why more labeled data does not improve every landmark.
+- title: From annotation to local inference
+  url: https://github.com/antonemking/SamSeesSheep/blob/main/ARCHITECTURE.md
+  kind: notes
+  status: Architecture note · repository document
+  summary: The system boundaries, human-review loop, data export, training, and inference path.

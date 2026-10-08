@@ -1,0 +1,254 @@
+{
+  "provenance": {
+    "model": "Scripted StubModel from Mya’s test suite",
+    "execution": "Real Agent loop and readTool; no provider requests",
+    "fixture": "README.md created for this demonstration",
+    "captured": "2026-10-08T20:23:43.564Z"
+  },
+  "events": [
+    {
+      "type": "agent_start",
+      "sessionId": "20261008T202343Z-doro8s",
+      "cwd": "/tmp/portfolio-mya-demo",
+      "model": "stub-1",
+      "provider": "stub",
+      "at": 1791491023563
+    },
+    {
+      "type": "turn_start",
+      "turn": 1,
+      "at": 1791491023563
+    },
+    {
+      "type": "context_snapshot",
+      "turn": 1,
+      "model": "stub-1",
+      "system": "You are pi, a terminal coding assistant.\n\nWorking directory: /tmp/portfolio-mya-demo\nTools available: read\n\nCall a tool when you need facts about the workspace; do not guess file contents.\nread, write, and edit stay inside the working directory. bash runs as the user in that directory.\nWhen you have what you need, answer in plain text. Be concise and concrete.",
+      "tools": [
+        {
+          "name": "read",
+          "description": "Read a UTF-8 text file inside the working directory. Returns the contents with 1-based line numbers. Use offset and limit for long files.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "File path, relative to the working directory."
+              },
+              "offset": {
+                "type": "number",
+                "description": "First line to return, 1-based. Defaults to 1."
+              },
+              "limit": {
+                "type": "number",
+                "description": "Maximum number of lines. Defaults to 2000."
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "Read README.md and summarize its contents."
+        }
+      ],
+      "at": 1791491023563
+    },
+    {
+      "type": "message_update",
+      "turn": 1,
+      "delta": {
+        "kind": "text",
+        "text": "I will read the fixture file."
+      }
+    },
+    {
+      "type": "message_update",
+      "turn": 1,
+      "delta": {
+        "kind": "tool_call",
+        "index": 1,
+        "id": "read_fixture",
+        "name": "read",
+        "argumentsDelta": "{\"path\":\"README.md\"}"
+      }
+    },
+    {
+      "type": "tool_execution_start",
+      "turn": 1,
+      "call": {
+        "id": "read_fixture",
+        "name": "read",
+        "arguments": {
+          "path": "README.md"
+        },
+        "rawArguments": "{\"path\":\"README.md\"}"
+      },
+      "at": 1791491023563
+    },
+    {
+      "type": "tool_execution_end",
+      "turn": 1,
+      "call": {
+        "id": "read_fixture",
+        "name": "read",
+        "arguments": {
+          "path": "README.md"
+        },
+        "rawArguments": "{\"path\":\"README.md\"}"
+      },
+      "outcome": {
+        "output": "1\t# Trace fixture\n2\tA controlled file-read example for the Mya portfolio."
+      },
+      "durationMs": 1,
+      "at": 1791491023564
+    },
+    {
+      "type": "turn_end",
+      "turn": 1,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I will read the fixture file."
+          },
+          {
+            "type": "tool_call",
+            "id": "read_fixture",
+            "name": "read",
+            "arguments": {
+              "path": "README.md"
+            },
+            "rawArguments": "{\"path\":\"README.md\"}"
+          }
+        ]
+      },
+      "stopReason": "tool_use",
+      "usage": {
+        "inputTokens": 10,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 5
+      },
+      "toolCalls": 1,
+      "at": 1791491023564
+    },
+    {
+      "type": "turn_start",
+      "turn": 2,
+      "at": 1791491023564
+    },
+    {
+      "type": "context_snapshot",
+      "turn": 2,
+      "model": "stub-1",
+      "system": "You are pi, a terminal coding assistant.\n\nWorking directory: /tmp/portfolio-mya-demo\nTools available: read\n\nCall a tool when you need facts about the workspace; do not guess file contents.\nread, write, and edit stay inside the working directory. bash runs as the user in that directory.\nWhen you have what you need, answer in plain text. Be concise and concrete.",
+      "tools": [
+        {
+          "name": "read",
+          "description": "Read a UTF-8 text file inside the working directory. Returns the contents with 1-based line numbers. Use offset and limit for long files.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "File path, relative to the working directory."
+              },
+              "offset": {
+                "type": "number",
+                "description": "First line to return, 1-based. Defaults to 1."
+              },
+              "limit": {
+                "type": "number",
+                "description": "Maximum number of lines. Defaults to 2000."
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "Read README.md and summarize its contents."
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "I will read the fixture file."
+            },
+            {
+              "type": "tool_call",
+              "id": "read_fixture",
+              "name": "read",
+              "arguments": {
+                "path": "README.md"
+              },
+              "rawArguments": "{\"path\":\"README.md\"}"
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "toolCallId": "read_fixture",
+          "toolName": "read",
+          "content": "1\t# Trace fixture\n2\tA controlled file-read example for the Mya portfolio."
+        }
+      ],
+      "at": 1791491023564
+    },
+    {
+      "type": "message_update",
+      "turn": 2,
+      "delta": {
+        "kind": "text",
+        "text": "The file describes a controlled file-read example for the Mya portfolio."
+      }
+    },
+    {
+      "type": "turn_end",
+      "turn": 2,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "The file describes a controlled file-read example for the Mya portfolio."
+          }
+        ]
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 10,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 5
+      },
+      "toolCalls": 0,
+      "at": 1791491023564
+    },
+    {
+      "type": "agent_end",
+      "reason": "end_turn",
+      "turns": 2,
+      "usage": {
+        "inputTokens": 20,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 10
+      },
+      "at": 1791491023564
+    }
+  ]
+}

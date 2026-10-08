@@ -4,9 +4,9 @@ title: Projects
 section: projects
 eyebrow: At the workbench
 permalink: /projects/
-intro: Small experiments in computer vision and robotics, with the learning kept visible.
+intro: Independent work in computer vision, agent systems, and the tools that make the learning inspectable.
 ---
 
-These are personal explorations alongside my work in enterprise AI. Each starts with something I want to understand and a way to work through it hands-on.
+Each project starts with a concrete question, follows it into a working system, and keeps the evidence close to the explanation.
 
 {% include project-list.html %}
