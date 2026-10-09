@@ -7,7 +7,7 @@ permalink: /blog/
 
 <ul class="writing-list">
   <li>
-    <span class="entry-date">2026</span>
+    <time datetime="2026-06-14">June 14, 2026</time>
     <div><h3><a href="{{ '/assets/documents/sam-sees-sheep-research.pdf' | relative_url }}">SamSeesSheep</a></h3></div>
   </li>
   <li>
