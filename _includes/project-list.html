@@ -1,13 +1,12 @@
 <ul class="project-list">
   {% for project in site.data.projects %}
   <li{% if project.featured %} class="featured-list-item"{% endif %}>
-    <div class="entry-heading"><h3><a href="{{ project.url | relative_url }}">{{ project.title }} <span aria-hidden="true">↗</span></a></h3><span class="entry-date">{{ project.status }}</span></div>
+    <div class="entry-heading"><h3>{% if project.external_url %}<a href="{{ project.external_url | escape }}">{{ project.title | escape }} <span aria-hidden="true">↗</span></a>{% else %}{{ project.title | escape }}{% endif %}</h3><span class="entry-date">{{ project.status }}</span></div>
     <p class="entry-type">{{ project.category }}</p>
     <p>{{ project.summary }}</p>
     {% if project.evidence %}<p class="evidence-note">{{ project.evidence }}</p>{% endif %}
-    {% if project.featured %}
-    <a class="project-thumbnail" href="{{ project.url | relative_url }}"><img src="{{ '/assets/projects/sam-flock.png' | relative_url }}" width="2036" height="640" loading="lazy" alt="SamSeesSheep: pasture footage with tracked head landmarks and ear-angle traces."></a>
-    <div class="resource-links"><a href="{{ project.url | relative_url }}">Case study <span aria-hidden="true">→</span></a><a href="https://github.com/antonemking/SamSeesSheep">GitHub <span aria-hidden="true">↗</span></a><a href="{{ '/writing/sam-sees-sheep/' | relative_url }}">Research write-up <span aria-hidden="true">→</span></a></div>
+    {% if project.featured and project.external_url %}
+    <a class="project-thumbnail" href="{{ project.external_url | escape }}"><img src="{{ '/assets/projects/sam-flock.png' | relative_url }}" width="2036" height="640" loading="lazy" alt="SamSeesSheep: pasture footage with tracked head landmarks and ear-angle traces."></a>
     {% endif %}
   </li>
   {% endfor %}

@@ -10,7 +10,7 @@ layout: default
   <h2 id="projects-heading">Projects</h2>
   <ul>
     {% for project in site.data.projects %}
-    <li><a href="{% if project.home_url %}{{ project.home_url | escape }}{% else %}{{ project.url | relative_url }}{% endif %}">{{ project.title | escape }}</a></li>
+    <li>{% if project.external_url %}<a href="{{ project.external_url | escape }}">{{ project.title | escape }}</a>{% else %}{{ project.title | escape }}{% endif %}</li>
     {% endfor %}
   </ul>
 </section>
