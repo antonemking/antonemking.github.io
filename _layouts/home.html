@@ -2,7 +2,10 @@
 layout: default
 ---
 <h1 class="sr-only">{{ site.title }}</h1>
+<div class="home-layout">
 <div class="home-intro prose">{{ content }}</div>
+<img class="home-portrait" src="{{ '/assets/images/antone-king.jpg' | relative_url }}" alt="Antone King holding a piglet in a barn" width="720" height="960">
+<div class="home-links">
 <section class="home-directory" aria-labelledby="projects-heading">
   <h2 id="projects-heading">Projects</h2>
   <ul>
@@ -24,3 +27,5 @@ layout: default
     <li><a href="{{ '/blog/' | relative_url }}">All writing</a></li>
   </ul>
 </section>
+</div>
+</div>
