@@ -5,7 +5,7 @@ date: 2026-10-11
 categories: [ai]
 ---
 
-I build [Mya](https://cursor.com/codebase/antone-king/mya), a terminal harness. The model continues a transcript, the harness runs the tools, and the session sits in a file I can open later. I keep this loop myself because I got tired of arguing about agents I could not inspect. Once you have a loop, the temptation is to hang more on it. A planner. A longer tool list. A summarizer that fires whenever the transcript looks long. I wanted a reason that was not "everyone else shipped it."
+I build [Mya](https://github.com/antonemking/mya), a terminal harness. The model continues a transcript, the harness runs the tools, and the session sits in a file I can open later. I keep this loop myself because I got tired of arguing about agents I could not inspect. Once you have a loop, the temptation is to hang more on it. A planner. A longer tool list. A summarizer that fires whenever the transcript looks long. I wanted a reason that was not "everyone else shipped it."
 
 So I read [An Empirical Study of Harness Design for Coding Agents](https://arxiv.org/abs/2609.20804) (Fan, Zhang, and coauthors, arXiv:2609.20804). They freeze the execution loop and move one piece: planning, the action space, or context management. Four models, Nemotron-3 at 30B, 120B, and 550B, plus Mistral-Medium-3.5-128B, on SWE-Bench Verified and Terminal-Bench 2.1. Temperature 0, one run per task, 176 settings. Context policies run at 32k, 64k, 96k, and 128k. Planning and the tool list flip only at 128k.
 

@@ -1,5 +1,5 @@
 ---
 permalink: /projects/mya/
-redirect_to: https://cursor.com/codebase/antone-king/mya
+redirect_to: https://github.com/antonemking/mya
 sitemap: false
 ---
