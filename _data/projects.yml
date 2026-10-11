@@ -6,6 +6,8 @@
   summary: From pasture video to reviewed head keypoints, a small pose model, and held-out measurement benchmarks.
   evidence: Research write-up · benchmark artifacts · public source
 - title: Mya
+  # Cursor Origin checkout, not a public GitHub repo. Some visitors will not be able to open it.
+  external_url: https://cursor.com/codebase/antone-king/mya
   status: Working harness
   category: Agent systems · Developer tools
   home: true
