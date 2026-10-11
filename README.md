@@ -24,8 +24,8 @@ The workflow deploys pushes to `main`. A local branch/build does not publish any
 - `index.md`: personal introduction; the home layout pulls in writing and project lists.
 - `_posts/`: dated Markdown posts. Preserve existing dates/permalinks when editing published writing.
 - `blog.md`: Writing archive, retaining its original `/blog/` URL.
-- `projects.md`, `projects/`: overview and individual project notes.
-- `_data/projects.yml`: shared project titles, summaries, and status on Home and Projects.
+- `projects.md`, `projects/`: redirects for bookmarked project URLs; SamSeesSheep goes directly to GitHub and the other routes return to the homepage project directory.
+- `_data/projects.yml`: homepage project directory; only verified public repository or project-site destinations use `external_url`. Projects without one remain plain text.
 - `library.html`, `_data/books.yml`: reading list, grouped by reading status; only confirmed books are listed.
 - `_layouts/`, `assets/css/style.scss`: accessible layouts and responsive styling.
 

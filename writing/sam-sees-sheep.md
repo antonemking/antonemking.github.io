@@ -19,7 +19,7 @@ The PDF is preserved as written. Its data-split screening paragraph reports NCC 
 
 ## Read alongside the paper
 
-- [Project case study]({{ '/projects/sam-sees-sheep/' | relative_url }}): the problem, implementation, evidence, and limits.
+- [Project repository](https://github.com/antonemking/SamSeesSheep): the source, setup, and project documentation.
 - [Held-out benchmark notes](https://github.com/antonemking/SamSeesSheep/blob/main/docs/v0.7-benchmark.md): the selected measurement windows and comparison across model versions and lighting conditions.
 - [Validation contract](https://github.com/antonemking/SamSeesSheep/blob/main/VALIDATION.md): the boundary between an ear-angle measurement and a clinical interpretation.
 - [Architecture](https://github.com/antonemking/SamSeesSheep/blob/main/ARCHITECTURE.md) and [setup guide](https://github.com/antonemking/SamSeesSheep/blob/main/SETUP.md): the system and its reproducibility path.

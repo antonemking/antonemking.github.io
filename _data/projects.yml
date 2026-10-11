@@ -1,5 +1,4 @@
 - title: SamSeesSheep
-  url: /projects/sam-sees-sheep/
   external_url: https://github.com/antonemking/SamSeesSheep
   status: Research pipeline
   category: Computer vision · Applied research
@@ -7,21 +6,18 @@
   summary: From pasture video to reviewed head keypoints, a small pose model, and held-out measurement benchmarks.
   evidence: Research write-up · benchmark artifacts · public source
 - title: Mya
-  url: /projects/mya/
   status: Working harness
   category: Agent systems · Developer tools
   home: true
   summary: An inspectable agent loop with tool events, persistent sessions, and recorded-run replay.
   evidence: Working code · sample trace · replay demo
 - title: Pixel Lab
-  url: /projects/pixel-lab/
   status: Local prototype
   category: Computer vision · Interactive learning
   home: true
   summary: Inspect a grape image, edit Python, and watch a loop walk through the pixels that become training data.
   evidence: Seven editable lessons · image and array inspection
 - title: Farm survey rover
-  url: /projects/farm-rover/
   status: Early exploration
   category: Farm robotics
   summary: Learning about cameras, field data collection, and robot perception on a small farm.
