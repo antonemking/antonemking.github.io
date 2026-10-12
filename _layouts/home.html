@@ -7,20 +7,12 @@ layout: default
   <h2 id="projects-heading">Projects</h2>
   <ul>
     {% for project in site.data.projects %}
-    <li><a href="{% if project.home_url %}{{ project.home_url | escape }}{% else %}{{ project.url | relative_url }}{% endif %}">{{ project.title | escape }}</a></li>
+    {% assign project_url = project.github_url | default: project.url %}
+    <li><a href="{{ project_url | relative_url }}">{{ project.title | escape }}</a></li>
     {% endfor %}
   </ul>
 </section>
 <section class="home-directory" aria-labelledby="writing-heading">
   <h2 id="writing-heading">Writing</h2>
-  <ul>
-    {% assign research = site.data.writing | where: 'kind', 'research' %}
-    {% for item in research %}
-    <li><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></li>
-    {% endfor %}
-    {% for post in site.posts %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
-    {% endfor %}
-    <li><a href="{{ '/blog/' | relative_url }}">All writing</a></li>
-  </ul>
+  {% include writing-list.html compact=true %}
 </section>

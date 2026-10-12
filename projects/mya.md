@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mya
+title: Mya Harness
 section: projects
 eyebrow: Agent systems · Developer tools
 permalink: /projects/mya/

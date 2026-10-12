@@ -24,12 +24,15 @@ The workflow deploys pushes to `main`. A local branch/build does not publish any
 - `index.md`: personal introduction; the home layout pulls in writing and project lists.
 - `_posts/`: dated Markdown posts. Preserve existing dates/permalinks when editing published writing.
 - `blog.md`: Writing archive, retaining its original `/blog/` URL.
+- `_data/writing.yml`, `_includes/writing-list.html`: the same curated writing titles and links on Home and Writing.
 - `projects.md`, `projects/`: overview and individual project notes.
 - `_data/projects.yml`: shared project titles, summaries, and status on Home and Projects.
 - `library.html`, `_data/books.yml`: reading list, grouped by reading status; only confirmed books are listed.
 - `_layouts/`, `assets/css/style.scss`: accessible layouts and responsive styling.
 
-Add posts using `YYYY-MM-DD-title.md`, with `layout: post`, a title, and a date in front matter. The archive and RSS feed update automatically. Existing post content is preserved in this iteration.
+Add posts using `YYYY-MM-DD-title.md`, with `layout: post`, a title, and a date in front matter. The RSS feed updates automatically. Add entries to `_data/writing.yml` to change the curated writing list on both Home and Writing.
+
+Home and Projects list SamSeesSheep and Mya Harness. A project's `github_url` sets its primary link on both pages; until a repository URL is provided, its existing `url` remains the destination.
 
 ## Project status and privacy
 
@@ -62,7 +65,7 @@ The Library groups books by reading status. Empty Read and Up next sections are 
 
 Build with _config.yml,_config.review.yml to include local-only Pixel Lab and original Mya visualization links. Production builds use _config.yml alone; no localhost demo links are emitted.
 
-- _data/writing.yml lists actual existing research and technical documents; it does not fabricate publications.
+- _data/writing.yml lists the SamSeesSheep paper and “The Queries You’ll Never See” article.
 - writing/sam-sees-sheep.md introduces the user's existing AI-assisted research write-up, explicitly not formally published or peer-reviewed.
 - Sam images/PDF are unchanged copies from the public antonemking/SamSeesSheep repository. Source/provenance is recorded in the external review handoff.
 - The Mya trace inspector consumes a controlled actual harness run with a scripted model and one real file-read tool. It does not call a provider or replay tools. Example input and model output are fixtures; timings are not performance evidence.
