@@ -1,0 +1,12 @@
+<ul{% unless include.compact %} class="writing-list"{% endunless %}>
+  {% for item in site.data.writing %}
+  <li>
+    {% if include.compact %}
+    <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+    {% else %}
+    <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %-d, %Y' }}</time>
+    <div><h3><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></h3></div>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
