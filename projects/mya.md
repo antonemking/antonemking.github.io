@@ -1,5 +1,5 @@
 ---
 permalink: /projects/mya/
-redirect_to: /#projects-heading
+redirect_to: https://github.com/antonemking/mya
 sitemap: false
 ---
