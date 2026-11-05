@@ -6,6 +6,7 @@
   summary: From pasture video to reviewed head keypoints, a small pose model, and held-out measurement benchmarks.
   evidence: Research write-up · benchmark artifacts · public source
 - title: Mya Harness
+  external_url: https://github.com/antonemking/mya
   status: Working harness
   category: Agent systems · Developer tools
   summary: An inspectable agent loop with tool events, persistent sessions, and recorded-run replay.
