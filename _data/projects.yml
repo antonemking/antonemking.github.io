@@ -1,3 +1,8 @@
+- title: SheepBench
+  external_url: https://www.sheepbench.com
+  status: Public benchmark
+  category: Computer vision · Agtech · Benchmark
+  summary: A public benchmark for sheep facial landmarks. Frontier vision models and a small custom model are scored on 36 face keypoints using a sealed, hand-labeled 20-head test set (Blind-20).
 - title: SamSeesSheep
   external_url: https://github.com/antonemking/SamSeesSheep
   status: Research pipeline
