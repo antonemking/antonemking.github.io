@@ -25,14 +25,14 @@ The workflow deploys pushes to `main`. A local branch/build does not publish any
 - `_posts/`: dated Markdown posts. Preserve existing dates/permalinks when editing published writing.
 - `blog.md`: Writing archive, retaining its original `/blog/` URL.
 - `_data/writing.yml`, `_includes/writing-list.html`: the same curated writing titles and links on Home and Writing.
-- `projects.md`, `projects/`: redirects for bookmarked project URLs; SamSeesSheep goes directly to GitHub and the other routes return to the homepage project directory.
+- `projects.md`, `projects/`: redirects for bookmarked project URLs; SamSeesSheep and Mya go directly to GitHub and the other routes return to the homepage project directory.
 - `_data/projects.yml`: homepage project directory; only verified public repository or project-site destinations use `external_url`. Projects without one remain plain text.
 - `library.html`, `_data/books.yml`: reading list, grouped by reading status; only confirmed books are listed.
 - `_layouts/`, `assets/css/style.scss`: accessible layouts and responsive styling.
 
 Add posts using `YYYY-MM-DD-title.md`, with `layout: post`, a title, and a date in front matter. The RSS feed updates automatically. Add entries to `_data/writing.yml` to change the curated writing list on both Home and Writing.
 
-The homepage project directory lists SamSeesSheep and Mya Harness. A project's `external_url` sets its primary destination. Mya Harness remains plain text until a public repository URL is provided.
+The homepage project directory lists SamSeesSheep and Mya Harness. A project's `external_url` sets its primary destination. Mya Harness links to https://github.com/antonemking/mya.
 
 ## Project status and privacy
 
